@@ -34,12 +34,12 @@ See the [paper](http://lmb.informatik.uni-freiburg.de/Publications/2018/ICKMB18)
 
 We use [nvidia-docker](https://github.com/NVIDIA/nvidia-docker#quick-start) for reliable GPU support in the containers. This is an extension to Docker and can be easily installed with just two commands.
 To run the networks, you need an Nvidia GPU with >1GB of memory (at least Kepler).
-Since we use TensorFlow, even a small GPU can run all networks (they just run slower). All networks have been successfully run on a NVidia GTX 970 with **4GB VRAM**, on inputs with a resolution of **960x540**.
+Since we use TensorFlow, even a small GPU can run all networks (they just run slower). All networks have been successfully run on a Nvidia GTX 970 with **4GB VRAM**, on inputs with a resolution of **960x540**.
 
 
 ## 1. Building the Docker image
 
-Simply run `make`. This will create two Docker images: The OS base (an Ubuntu 18.04 base extended by Nvidia, with CUDA 10.0 and CuDNN 7.1), and the "lmb-freiburg-netdef" image on top. In total, about **17GB** of space will be needed after building. The build process will download our own TensorFlow binaries (v1.11, custom-built for Ubuntu 18.04 and CUDA 10).
+Simply run `make`. This will create two Docker images: The OS base (an Ubuntu 18.04 base extended by Nvidia, with CUDA 10.0 and CuDNN 7.3), and the "lmb-freiburg-netdef" image on top. In total, about **17GB** of space will be needed after building. The build process will download our own TensorFlow binaries (v1.11, custom-built for Ubuntu 18.04 and CUDA 10).
 
 
 ## 2. Running containers
