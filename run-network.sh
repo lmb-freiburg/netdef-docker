@@ -22,11 +22,8 @@ fun__print_usage () {
   printf "\n";
   printf "Usage: ./run-network.sh -n network [-g gpu] [-v|vv] first-input second-input output\n";
   printf "\n";
-  printf "where 'first-input' and 'second-input' are either both images (in which\n";
-  printf "case 'output' is interpreted as output file) or both files of newline-\n";
-  printf "separated filepaths (in which case the output argument must be a file\n";
-  printf "of newline-separated output filenames). All files must have the exact\n";
-  printf "same number of lines (one output per input pair).\n";
+  printf "where 'first-input' and 'second-input' are both images, and 'output'\n";
+  printf "is an output folder (typically '.' for 'here').\n";
   printf "For disparity estimation, the first/second inputs are the left/right\n";
   printf "camera views. The estimated disparity maps are valid for the first (left)\n";
   printf "camera. For optical flow estimation, the estimated flow maps the first\n";
