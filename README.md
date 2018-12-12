@@ -39,7 +39,7 @@ Since we use TensorFlow, even a small GPU can run all networks (they just run sl
 
 ## 1. Building the Docker image
 
-Simply run `make`. This will create two Docker images: The OS base (an Ubuntu 18.04 base extended by Nvidia, with CUDA 10.0 and CuDNN 7.1), and the "lmb-freiburg-netdef" image on top. In total, about **17GB** of space will be needed after building. The build process will download our own TensorFlow binaries (v1.12, custom-built for Ubuntu 18.04 and CUDA 10).
+Simply run `make`. This will create two Docker images: The OS base (an Ubuntu 18.04 base extended by Nvidia, with CUDA 10.0 and CuDNN 7.1), and the "lmb-freiburg-netdef" image on top. In total, about **17GB** of space will be needed after building. The build process will download our own TensorFlow binaries (v1.11, custom-built for Ubuntu 18.04 and CUDA 10).
 
 
 ## 2. Running containers
