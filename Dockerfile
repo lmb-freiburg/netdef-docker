@@ -49,7 +49,7 @@ RUN sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   && \
 
 RUN git clone https://github.com/lmb-freiburg/lmbspecialops && \
     cd lmbspecialops                                        && \
-    git checkout eccv18                                     && \
+    git checkout 3e01ebaf0da6a5d0545f1ffead4bccdbe79a26f5   && \
     find . -type f -print0 | xargs -0 sed -i 's/data.starts_with(/str_util::StartsWith(data,/g' && \
     find . -type f -print0 | xargs -0 sed -i 's/^set_target_properties.*GLIBCXX_USE_CXX11_ABI.*/#/g' && \
     mkdir build                                             && \
@@ -61,8 +61,12 @@ RUN git clone https://github.com/lmb-freiburg/lmbspecialops && \
     sudo rm /usr/local/cuda/lib64/stubs/libcuda.so.1
 
 RUN git clone https://github.com/lmb-freiburg/netdef_slim   && \
+    cd netdef_slim                                          && \
+    git checkout 54f101d0f6a0bb1b815b808754176e2732e8de77   && \
+    cd ..                                                   && \
     git clone https://github.com/lmb-freiburg/netdef_models && \
     cd netdef_models                                        && \
+    git checkout 204add373a1a8070e082112a990cb553123b79af   && \
     cd DispNet3  && bash download_snapshots.sh && cd ..     && \
     cd FlowNet3  && bash download_snapshots.sh && cd ..     && \
     cd FlowNetH  && bash download_snapshots.sh && cd ..
