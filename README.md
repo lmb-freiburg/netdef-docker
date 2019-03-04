@@ -4,8 +4,6 @@
 
 This repository contains a Dockerfile and scripts to build and run neural networks for disparity, optical flow, and scene flow estimation in Docker containers. We also provide some example data to test the networks. 
 
-Author: Nikolaus Mayer (mayern@cs.uni-freiburg.de)
-
 ![Teaser](data/teaser.png)
 
 If you use this project or parts of it in your research, please cite the corresponding papers:
