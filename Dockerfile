@@ -41,9 +41,11 @@ ENV HOME=/home/${USER}
 
 WORKDIR ${HOME}
 
+COPY requirements.txt .
 RUN sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   && \
     sudo python3 get-pip.py                                        && \
     wget https://lmb.informatik.uni-freiburg.de/resources/binaries/tensorflow-binaries/tensorflow-1.11.0-cp36-cp36m-linux_x86_64.whl && \
+    sudo -H pip3 install -r requirements.txt                       && \
     sudo -H pip3 install ${HOME}/tensorflow-1.11.0-cp36-cp36m-linux_x86_64.whl && \
     sudo -H pip3 install scikit-learn pillow scipy
 
