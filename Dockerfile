@@ -68,7 +68,7 @@ RUN git clone https://github.com/lmb-freiburg/netdef_slim   && \
     cd ..                                                   && \
     git clone https://github.com/lmb-freiburg/netdef_models && \
     cd netdef_models                                        && \
-    git checkout 204add373a1a8070e082112a990cb553123b79af   && \
+    git checkout 7d3311579cf712b31d05ec29f3dc63df067aa07b   && \
     cd DispNet3  && bash download_snapshots.sh && cd ..     && \
     cd FlowNet3  && bash download_snapshots.sh && cd ..     && \
     cd FlowNetH  && bash download_snapshots.sh && cd ..
