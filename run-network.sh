@@ -46,9 +46,9 @@ fun__print_usage () {
   printf "  DispNet3/CSS-ft-kitti:    DispNet (finetuned for KITTI)\n";
   printf "  FlowNet3/CSS:             FlowNet (ECCV 2018 architecture)\n";
   printf "  FlowNet3/css:             FlowNet (smaller and faster)\n";
-  printf "  FlowNet3/CSS-ft-sd:       FlowNet (finetuned for small motions)\n";
+  printf "  FlowNet3/CSSR-ft-sd:      FlowNet (finetuned for small motions)\n";
   printf "  FlowNet3/CSS-ft-kitti:    FlowNet (finetuned for KITTI)\n";
-  printf "  FlowNet3/CSS-ft-sintel:   FlowNet (finetuned for Sintel)\n";
+  printf "  FlowNet3/CSSR-ft-sintel:  FlowNet (finetuned for Sintel)\n";
   printf "  FlowNetH/Pred-Merged:     FlowNet with multiple hypotheses\n";
   printf "  FlowNetH/Pred-Merged-SS:  FlowNet with multiple hypotheses\n";
   printf "                            (alternative architecture)\n";
@@ -121,9 +121,9 @@ case "${NETWORK}" in
   DispNet3/CSS-ft-kitti)         WORKDIR="${BASEDIR}/DispNet3/CSS-ft-kitti";;
   FlowNet3/css)                  WORKDIR="${BASEDIR}/FlowNet3/css";;
   FlowNet3/CSS)                  WORKDIR="${BASEDIR}/FlowNet3/CSS";;
-  FlowNet3/CSS-ft-sd)            WORKDIR="${BASEDIR}/FlowNet3/CSS-ft-sd";;
+  FlowNet3/CSSR-ft-sd)           WORKDIR="${BASEDIR}/FlowNet3/CSSR-ft-sd";;
   FlowNet3/CSS-ft-kitti)         WORKDIR="${BASEDIR}/FlowNet3/CSS-ft-kitti";;
-  FlowNet3/CSS-ft-sintel)        WORKDIR="${BASEDIR}/FlowNet3/CSS-ft-sintel";;
+  FlowNet3/CSSR-ft-sintel)       WORKDIR="${BASEDIR}/FlowNet3/CSSR-ft-sintel";;
   FlowNetH/Pred-Merged)          WORKDIR="${BASEDIR}/FlowNetH/Pred-Merged";;
   FlowNetH/Pred-Merged-SS)       WORKDIR="${BASEDIR}/FlowNetH/Pred-Merged-SS";;
   FlowNetH/Pred-Merged-FT-KITTI) WORKDIR="${BASEDIR}/FlowNetH/Pred-Merged-FT-KITTI";;
